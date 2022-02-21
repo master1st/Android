@@ -23,3 +23,5 @@ public class SubActivity extends AppCompatActivity {
         tv_sub.setText(str);
     }
 }
+
+//getExtra
