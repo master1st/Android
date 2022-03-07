@@ -1,10 +1,7 @@
 package com.example.kotlinstudy01
 
 fun main(){
-    helloWorlds()
-    println(add(4,5))
-    practice()
-    checkNum(1)
+    curront()
 }
 
 fun helloWorlds() : Unit {
@@ -59,4 +56,17 @@ fun array(){
     arrayList.add(10)
 
 
+}
+
+fun forAndWhile(){
+    val students = arrayListOf("joyce")
+}
+
+fun curront(){
+    var index:Int = 0;
+    while(index < 10){
+        println("current index: ${index}")
+        index++
+
+    }
 }
