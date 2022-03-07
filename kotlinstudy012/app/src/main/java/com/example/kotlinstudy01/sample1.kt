@@ -1,7 +1,7 @@
 package com.example.kotlinstudy01
 
 fun main(){
-    curront()
+    ignoreNulls("memory")
 }
 
 fun helloWorlds() : Unit {
@@ -58,9 +58,9 @@ fun array(){
 
 }
 
-fun forAndWhile(){
-    val students = arrayListOf("joyce")
-}
+//fun forAndWhile(){
+//    val students = arrayListOf("joyce")
+//}
 
 fun curront(){
     var index:Int = 0;
@@ -68,5 +68,42 @@ fun curront(){
         println("current index: ${index}")
         index++
 
+    }
+}
+
+fun forAndWhile(){
+    val students : ArrayList<String> = arrayListOf("joyce","enchul","seokhy","eungje","jihun")
+    for( name in students){
+        println("${name}")
+    }
+}
+
+// 7. Nullable / NonNull
+
+fun nullcheck(){
+    //NPE: NULL Pointer Exception
+
+    var name:String = "joyce"
+
+    var Nullname:String? = null
+
+    var nameInUpperCase:String = name.toUpperCase()
+
+    var nullNameInUpperCase= Nullname?.toUpperCase()
+
+// ?:
+
+    val lastName : String? = "chicken"
+    val fullName : String = name+" "+(lastName?:"NoN NULL")
+    println("${fullName}")
+}
+//아래와 같은 경우는 컴파일러에게 미리 함수 매개변수가 null 값이들어올리 없어라고해서 !! 를 부팅는것
+fun ignoreNulls(str : String?){
+    val mNotNull : String = str!!
+    val upper :String = mNotNull.toUpperCase()
+
+    val email : String?=null
+    email?.let{
+        println("my email is ${email}")
     }
 }
