@@ -18,6 +18,7 @@ fun main() {
     val lamda : (Double) -> Boolean = { number : Double ->
         number == 4.2474}
     println(invokeLamda(lamda))
+    println(invokeLamda({it > 4.2}))
 
     }
 
@@ -45,6 +46,6 @@ val calculateGrade : (Int) -> String = {
 // 람다를 표현하는 여러가지 방법
 
 fun invokeLamda(lamda : (Double) -> Boolean) : Boolean {
-    return lamda(4.2474)
+    return lamda(4.4474)
 }
 
