@@ -25,6 +25,7 @@
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
             android:background="@drawable/selection"
+            android:textColor="@color/black"
             android:gravity="center"
             android:text="@string/option_text1"
             android:textSize="20dp"></TextView>
@@ -37,6 +38,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:text="@string/option_text2"
+            android:textColor="@color/black"
             android:gravity="center"
             android:textSize="20dp"
             android:background="@drawable/selection"></TextView>
@@ -49,6 +51,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:text="@string/option_text3"
+            android:textColor="@color/black"
             android:gravity="center"
             android:textSize="20dp"
             android:background="@drawable/selection"></TextView>
@@ -61,6 +64,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:text="@string/option_text4"
+            android:textColor="@color/black"
             android:gravity="center"
             android:textSize="20dp"
             android:background="@drawable/selection"></TextView>
@@ -68,6 +72,7 @@
     </LinearLayout>
 
     <ImageView
+        android:id="@+id/btn_back"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginBottom="28dp"

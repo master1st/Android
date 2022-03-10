@@ -8,7 +8,7 @@
     tools:context=".fragment.ResultFragment">
 
     <TextView
-        android:id="@+id/text1"
+        android:id="@+id/tv_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="108dp"
@@ -20,20 +20,21 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/imageView"
+        android:id="@+id/tv_sub"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
         android:text="@string/result_text"
+        android:textColor="@color/black"
         android:textAlignment="center"
         android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/text1"
+        app:layout_constraintBottom_toTopOf="@+id/btn_home"
+        app:layout_constraintTop_toBottomOf="@+id/tv_main"
         app:layout_constraintVertical_bias="0.422"
         tools:layout_editor_absoluteX="16dp"></TextView>
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/btn_home"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/next"
