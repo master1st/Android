@@ -18,7 +18,7 @@ abstract class MemoDatabase : RoomDatabase() {
                     INSTANCE = Room.databaseBuilder(context.applicationContext,
                     MemoDatabase::class.java, "memo.db")
                         .fallbackToDestructiveMigration()
-                        .build()
+                        .build()            //안드로이드 공식문서에서는 fallback 메서드와 synchonized 메서드에 대한 설명은 없음.
                 }
             }
             return INSTANCE
