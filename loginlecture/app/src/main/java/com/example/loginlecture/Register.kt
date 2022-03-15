@@ -53,16 +53,15 @@ class Register : AppCompatActivity() {
                 if(existBlank){
                     dialog("blank")
                 }
-                else{
-                    if(!ispwSame){
+                else if(!ispwSame){
                         dialog("not same")
                     }
                 }
             }
-
+o
         }
 
-        fun dialog(textmsg : String) :Unit{
+        fun dialog(textmsg : String) {
             val dialog = AlertDialog.Builder(this)
             if(textmsg.equals("blank")){
                 dialog.setTitle("회원가입 에러")
