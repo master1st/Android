@@ -1,15 +1,17 @@
 package com.example.loginlecture
 
 import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_register.*
 
 class Register : AppCompatActivity() {
-
+    val TAG:String = "Register"
     var existBlank = false
     var ispwSame = false
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -63,16 +65,25 @@ o
 
         fun dialog(textmsg : String) {
             val dialog = AlertDialog.Builder(this)
-            if(textmsg.equals("blank")){
+            if (textmsg.equals("blank")) {
                 dialog.setTitle("회원가입 에러")
                 dialog.setMessage("입력칸이 비어있습니다")
-                    .show()
-            }
-            else if(textmsg.equals("not same"))
+
+            } else if (textmsg.equals("not same")) {
+
                 dialog.setTitle("회원가입 에러")
                 dialog.setMessage("비밀번호가 일치하지 않습니다.")
-                    .show()
+            }
 
+            var dialog_listener = object : DialogInterface.OnClickListener {
+                override fun onClick(p0: DialogInterface?, p1: Int) {
+
+                    when (p1) {
+                        DialogInterface.BUTTON_POSITIVE ->
+                            Log.d(TAG, "")
+                    }
+                }
+            }
         }
 
 

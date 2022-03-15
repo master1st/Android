@@ -1,15 +1,17 @@
 package com.example.loginlecture
 
 import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_register.*
 
 class MainActivity : AppCompatActivity() {
-
+    val TAG: String = "MainActivity"
     var existBlank = false
     var ispwSame = false
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,14 +47,26 @@ class MainActivity : AppCompatActivity() {
                 if(text.equals("success")){
                     dialog.setTitle("로그인 성공")
                     dialog.setMessage("로그인에 성공하였습니다.")
-                        .show()
+
                 }
                 else if(text.equals("fail")){
                     dialog.setTitle("로그인 에러")
                     dialog.setMessage("아이디 또는 비밀번호가 일치하지 않습니다.")
-                        .show()
+
                 }
 
+                var dialog_listener = object : DialogInterface.OnClickListener
+                {
+                    override fun onClick(p0: DialogInterface?, p1: Int) {
+
+                        when(p1){
+                            DialogInterface.BUTTON_POSITIVE ->
+                                Log.d(TAG, "")
+                        }
+                    }
+                }
+
+            dialog.show()
             }
 
 }
